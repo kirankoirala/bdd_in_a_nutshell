@@ -17,7 +17,7 @@
           <div>Total:&nbsp;<label id='total' style='font-weight:bold'>erer</label> </div>
     </div>
    <div>
-        <input type='button' value='Calculate Total' onclick='javascript:calculate()'/>
+        <input type='button' id="calculate" value='Calculate Total' onclick='javascript:calculate()'/>
     </div>
 </div>
 
@@ -31,9 +31,9 @@
         var p = parseFloat(part) ;
         var pa = parseFloat(paint);
         var l = parseFloat(labour);
-        var sub = p+pa+l;
-        var tax = (sub)/100 * 8;
-        var tot = sub + tax
+        var sub = parseFloat(p + pa + l).toFixed(2);
+        var tax = parseFloat((sub) / 100 * 8).toFixed(2);
+        var tot = parseFloat(sub + tax).toFixed(2)
 
         $('#subTotal').text(sub);
         $('#tax').text(tax);
