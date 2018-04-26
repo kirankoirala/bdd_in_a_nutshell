@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = " -- Estimation -- ";
+}
+
+<div id="myCarousel" class="carousel" style='margin-top: 10px'>
+  <div><label style='width:50px'>Name:</label>
+        <input type='text' id='name' width='100px'/>
+    </div>
+    <div><label style='width:50px'>Parts:</label>
+        <input id='part' type='text' width='100px' onkeyup="this.value=this.value.replace(/[^\d.]/,'')"/>
+    </div>
+    <div><label style='width:50px'>Paint:</label><input id='paint' type='text' width='100px'/></div>
+    <div><label style='width:50px'>Labour:</label><input id='labour' type='text' width='100px'/></div>
+    <div id='totalDiv' style='visibility:hidden'>
+          <div>Sub Total:&nbsp;<label id='subTotal' >erer</label></div>
+          <div>Tax (8%):&nbsp;<label id='tax' >erer</label></div>
+          <div>Total:&nbsp;<label id='total' style='font-weight:bold'>erer</label> </div>
+    </div>
+   <div>
+        <input type='button' value='Calculate Total' onclick='javascript:calculate()'/>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function calculate(){
+        var part = document.getElementById('part').value;
+        var paint = document.getElementById('paint').value;
+        var labour = document.getElementById('labour').value;
+        document.getElementById('totalDiv').style.visibility ='visible';
+
+        var p = parseFloat(part) ;
+        var pa = parseFloat(paint);
+        var l = parseFloat(labour);
+        var sub = p+pa+l;
+        var tax = (sub)/100 * 8;
+        var tot = sub + tax
+
+        $('#subTotal').text(sub);
+        $('#tax').text(tax);
+        $('#total').text(tot);
+
+        
+    }
+</script>
+    
