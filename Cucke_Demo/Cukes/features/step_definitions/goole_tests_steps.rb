@@ -1,15 +1,15 @@
 require 'watir'
 require 'rspec'
 
-browser = Watir::Browser.new
+browser = Watir::Browser.new :chrome
 
 Given(/^I am in Google home page$/) do
-  browser.goto("https://www.google.com")
-
+  browser.goto"https://www.google.com"
 end
 
 When(/^I search for "([^"]*)"$/) do |search_text|
   browser.text_field(:id, 'lst-ib').value = search_text
+  sleep 1
   browser.button(:class, 'lsb').click
 end
 
