@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Cukes\**" />
+    <Content Remove="Cukes\**" />
+    <EmbeddedResource Remove="Cukes\**" />
+    <None Remove="Cukes\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
   </ItemGroup>
 
@@ -14,29 +21,5 @@
 
   <ItemGroup>
     <Content Remove="Views\Home\About.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Cukes\features\receipt.feature.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>receipt.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Cukes\features\test_google.feature.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>test_google.feature</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Cukes\features\receipt.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>receipt.feature.cs</LastGenOutput>
-    </None>
-    <None Update="Cukes\features\test_google.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>test_google.feature.cs</LastGenOutput>
-    </None>
   </ItemGroup>
 </Project>

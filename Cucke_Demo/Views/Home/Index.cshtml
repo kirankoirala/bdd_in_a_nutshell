@@ -19,27 +19,40 @@
    <div>
         <input type='button' id="calculate" value='Calculate Total' onclick='javascript:calculate()'/>
     </div>
+    <div id="errorDiv" style='visibility:hidden'>
+        <label id="error" style="color:red;">Invalid Inputs</label>
+
+    </div>
 </div>
 
 <script type="text/javascript">
     function calculate(){
-        var part = document.getElementById('part').value;
-        var paint = document.getElementById('paint').value;
-        var labour = document.getElementById('labour').value;
-        document.getElementById('totalDiv').style.visibility ='visible';
+        //var part = document.getElementById('part').value;
+        //var paint = document.getElementById('paint').value;
+        //var labour = document.getElementById('labour').value;
+       
 
-        var p = parseFloat(part) ;
-        var pa = parseFloat(paint);
-        var l = parseFloat(labour);
-        var sub = parseFloat(p + pa + l).toFixed(2);
-        var tax = parseFloat((sub) / 100 * 8).toFixed(2);
-        var tot = parseFloat(sub + tax).toFixed(2)
+        //var p = isNaN(parseFloat(part)) ? 0 : parseFloat(part) ;
+        //var pa = isNaN(parseFloat(paint)) ? 0 : parseFloat(paint);
+        //var l = isNaN(parseFloat(labour)) ? 0 : parseFloat(labour);
+        //var sub = parseFloat(p + pa + l).toFixed(2);
 
-        $('#subTotal').text(sub);
-        $('#tax').text(tax);
-        $('#total').text(tot);
+        //if ( isNaN(sub) || sub <= 0) {
 
-        
+        //    //document.getElementById('errorDiv').style.visibility = 'visible';
+
+        //}
+        //else {
+        //    document.getElementById('errorDiv').style.visibility = 'hidden';
+
+        //    document.getElementById('totalDiv').style.visibility = 'visible';
+        //    var tax = parseFloat((sub) / 100 * 8).toFixed(2);
+        //    var tot = parseFloat(parseFloat(tax) + parseFloat(sub)).toFixed(2)
+
+        //    $('#subTotal').text(sub);
+        //    $('#tax').text(tax);
+        //    $('#total').text(tot);
+        //}
     }
 </script>
     

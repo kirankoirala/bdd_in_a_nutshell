@@ -3,7 +3,7 @@ Feature: Sum up all
   As a cash counter person
   I want to make sure that tax and total are calculated correctly
 
-  Scenario: Search for solera
+  Scenario: Calculate tax and total correctly
     Given I am in the receipt page
     When I enter "40" dollar for the parts
     And I enter "30" dollar for the paint
@@ -11,4 +11,11 @@ Feature: Sum up all
     And I calcualte totals
     Then I should see the tax is calculated as "8" dollar
     And the total should be "108" dollar
+
+
+  Scenario: One of the value must be more than 0
+    Given I am in the receipt page
+    And I calcualte totals
+    Then I should see "Invalid Inputs" error message
+
 
