@@ -26,11 +26,9 @@ And(/^I calcualte totals$/) do
 end
 
 Then(/^I should see the tax is calculated as "([^"]*)" dollar$/) do |tax|
-
-  expect(browser.label(:id, 'tax').text).to be equal("8.00")
-
+  expect(browser.label(:id, 'tax').text).eql?("8.00")
 end
 
 And(/^the total should be "([^"]*)" dollar$/) do |total|
-  pending
+  expect(browser.label(:id, 'total').text).eql?("100")
 end
