@@ -9,13 +9,12 @@ Feature: Sum up all
     And I enter "30" dollar for the paint
     And I enter "30" dollar for the labour
     And I calcualte totals
-    Then I should see the tax is calculated as "8" dollar
+    Then I should see the 8 percent tax is calculated as "8" dollar
     And the total should be "108" dollar
-
 
   Scenario: One of the value must be more than 0
     Given I am in the receipt page
-    And I calcualte totals
+    When I calcualte totals
     Then I should see "Invalid Inputs" error message
 
 

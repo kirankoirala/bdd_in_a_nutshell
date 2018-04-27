@@ -27,32 +27,32 @@
 
 <script type="text/javascript">
     function calculate(){
-        //var part = document.getElementById('part').value;
-        //var paint = document.getElementById('paint').value;
-        //var labour = document.getElementById('labour').value;
+        var part = document.getElementById('part').value;
+        var paint = document.getElementById('paint').value;
+        var labour = document.getElementById('labour').value;
        
 
-        //var p = isNaN(parseFloat(part)) ? 0 : parseFloat(part) ;
-        //var pa = isNaN(parseFloat(paint)) ? 0 : parseFloat(paint);
-        //var l = isNaN(parseFloat(labour)) ? 0 : parseFloat(labour);
-        //var sub = parseFloat(p + pa + l).toFixed(2);
+        var p = isNaN(parseFloat(part)) ? 0 : parseFloat(part) ;
+        var pa = isNaN(parseFloat(paint)) ? 0 : parseFloat(paint);
+        var l = isNaN(parseFloat(labour)) ? 0 : parseFloat(labour);
+        var sub = parseFloat(p + pa + l).toFixed(2);
 
-        //if ( isNaN(sub) || sub <= 0) {
+        if ( isNaN(sub) || sub <= 0) {
 
-        //    //document.getElementById('errorDiv').style.visibility = 'visible';
+            //document.getElementById('errorDiv').style.visibility = 'visible';
 
-        //}
-        //else {
-        //    document.getElementById('errorDiv').style.visibility = 'hidden';
+        }
+        else {
+            document.getElementById('errorDiv').style.visibility = 'hidden';
 
-        //    document.getElementById('totalDiv').style.visibility = 'visible';
-        //    var tax = parseFloat((sub) / 100 * 8).toFixed(2);
-        //    var tot = parseFloat(parseFloat(tax) + parseFloat(sub)).toFixed(2)
+            document.getElementById('totalDiv').style.visibility = 'visible';
+            var tax = parseFloat((sub) / 100 * 8).toFixed(2);
+            var tot = parseFloat(parseFloat(tax) + parseFloat(sub)).toFixed(2)
 
-        //    $('#subTotal').text(sub);
-        //    $('#tax').text(tax);
-        //    $('#total').text(tot);
-        //}
+            $('#subTotal').text(sub);
+            $('#tax').text(tax);
+            $('#total').text(tot);
+        }
     }
 </script>
     
