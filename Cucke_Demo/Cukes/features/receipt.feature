@@ -11,4 +11,3 @@ Feature: Sum up all
     And I calcualte totals
     Then I should see the tax is calculated as "8" dollar
     And the total should be "108" dollar
-

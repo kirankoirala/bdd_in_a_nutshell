@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.5" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +22,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>receipt.feature</DependentUpon>
     </Compile>
+    <Compile Update="Cukes\features\search_solera.feature.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>search_solera.feature</DependentUpon>
+    </Compile>
     <Compile Update="Cukes\features\test_google.feature.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -33,6 +38,10 @@
     <None Update="Cukes\features\receipt.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>receipt.feature.cs</LastGenOutput>
+    </None>
+    <None Update="Cukes\features\search_solera.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>search_solera.feature.cs</LastGenOutput>
     </None>
     <None Update="Cukes\features\test_google.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
